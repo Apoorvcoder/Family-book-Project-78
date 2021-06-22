@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href="style.css">
+        <title>My Family Book</title>
+    </head>
+
+    <body>
+        <h1 id = "head">My Family Book</h1>
+        <img src="family.jpg" style="width: 30%;" id = "family_member_image">
+        <h4 id = "family_member_name"></h4>
+        <button onclick="update()">Next</button>
+
+
+        <script>
+
+            var images = 
+            [
+                "family.jpg",
+                "father.jpg",
+                "mom.jpg",
+                "brother.jpg",
+                "sister.png"
+
+            ];
+
+            var names = 
+            [   
+                "My Family",
+                "Vijay Anand Tiwari",
+                "Anju Tiwari",
+                "Apoorv Tiwari",
+                "Ishita Tiwari"
+            ];
+
+            var i = 0;
+            function update() {
+                i++;
+                var number_of_family_members_in_arrays = 5;
+                if (i >  number_of_family_members_in_arrays) 
+                {
+                    i = 0;
+                }
+
+                var updated_img = images[i];
+                var updated_name = names[i];
+
+                document.getElementById("family_member_image").src = updated_img;
+                document.getElementById("family_member_name").innerHTML = updated_name;
+
+            }
+
+        </script>
+    </body>
+</html>
